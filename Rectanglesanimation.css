@@ -1,0 +1,126 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    background-color:#00BFFF;
+    overflow:hidden;
+}
+
+.rects
+{
+    position:relative;
+    display: flex;
+}
+
+.rects span
+{
+    width: 7vw;
+    height: 50vh;
+    margin:0px 20px;
+    background:#00BFFF;
+    animation: shadow 1.5s linear infinite;
+}
+
+@keyframes shadow
+{
+    0%
+    {
+        box-shadow: 0 0 0 rgba(0,0,0,0.5);
+        opacity : 0;
+        transform: translate(-50px) scale(1);
+    }
+    50%
+    {
+        box-shadow: 0 20px 50px rgba(0,0,0,0.5);   
+        opacity:1;
+        transform: translate(0px) scale(1.2);
+    }
+    100%
+    {
+        box-shadow: 0 0 0 rgba(0,0,0,0.5);
+        opacity:0;
+        transform: translate(50px) scale(1);
+    }
+
+}
+
+.rects span:nth-child(1)
+{
+    animation-delay:0s;
+}
+.rects span:nth-child(2)
+{
+    animation-delay:0.2s;
+}.rects span:nth-child(3)
+{
+    animation-delay:0.4s;
+}.rects span:nth-child(4)
+{
+    animation-delay:0.6s;
+}.rects span:nth-child(5)
+{
+    animation-delay:0.8s;
+}.rects span:nth-child(6)
+{
+    animation-delay:1s;
+}.rects span:nth-child(7)
+{
+    animation-delay:1.2s;
+}
+
+.name
+{
+    position:absolute;
+    top:2vh;
+    left:-15vw;
+    font-size:20px;
+    font-family:cursive;
+    font-weight:700;
+    color: #FFF;
+    animation: name 5s linear infinite 0s alternate;
+}
+
+.name2
+{
+    position:absolute;
+    bottom:2vh;
+    right:-15vw;
+    font-size:20px;
+    font-family:cursive;
+    font-weight:700;
+    color: #FFF;
+    animation: name2 5s linear infinite 0s alternate;
+}
+
+@keyframes name
+{
+    0%
+    {
+        transform: translate(0vw);
+    }
+    100%
+    {
+        transform: translate(119vw);
+    }
+}
+
+@keyframes name2
+{
+    0%
+    {
+        transform: translate(0vw);
+    }
+    100%
+    {
+        transform:translate(-119vw);
+    }
+}
